@@ -1,13 +1,263 @@
-body {
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  height: 100vh;
+  background: url("./assets/bg-main-desktop.png") top center / 100% 240px
+      no-repeat fixed,
+    #ffffff;
+}
+#root {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 710px) {
+  body {
+    background: url("./assets/bg-main-desktop.png") top left / 40% 100%
+        no-repeat fixed,
+      #ffffff;
+  }
+}
+label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+input {
+  width: 100%;
+  height: 45px;
+  font-weight: 600;
+  padding: 0 10px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+button {
+  width: 100%;
+  height: 50px;
+  background: #000;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+h2 {
+  font-size: 28px;
+  letter-spacing: 12%;
+  color: #000;
+}
+
+.reactLogo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 6rem;
+}
+.main-container {
+  display: grid;
+  grid-template-rows: 43% 57%;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+}
+.card-holder {
+  position: relative;
+  max-width: 600px;
+  width: 500px;
+  margin: 0 auto;
+}
+.card-one,
+.card-two {
+  width: 288px;
+  height: 159px;
+}
+.card-one {
+  position: absolute;
+  z-index: 2;
+  top: 125px;
+  left: 20px;
+  border-radius: 8px;
+  background: url("./assets/bg-card-front.png") center / 288px 159px no-repeat;
+}
+.card-two {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 1;
+  border-radius: 8px;
+  background: url("./assets/bg-card-back.png") center / 288px 159px no-repeat;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.errorBorder {
+  border: 2px solid tomato;
+}
+.errormessage {
+  font-size: 12px;
+  color: tomato;
+  font-weight: 600;
+}
+.input-collection-holder {
+  display: flex;
+  gap: 10px;
+}
+.name-date {
+  text-transform: capitalize;
+  font-size: 10px;
+  color: white;
+}
+.secure-holder {
+  display: grid;
+  grid-template-columns: 40% auto;
+  gap: 10px;
+}
+.text-container-card {
+  width: 248px;
+  position: absolute;
+  top: 85px;
+  left: 20px;
+  display: grid;
+  gap: 5px;
+}
+.name-date-container {
+  display: flex;
+  justify-content: space-between;
+}
+.input-holder-form {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.completePage {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0 20px;
+  align-items: center;
+}
+.completePage img {
+  width: 80px;
+}
+.holder-name {
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.1em;
+  color: white;
+  text-shadow: 1.2px 1.2px 0px #868686, 1px 1px 0px #868686,
+    0.8px 0.8px 0px #868686, 0.6px 0.6px 0px #868686, 0.4px 0.4px 0px #868686,
+    0.2px 0.2px 0px #868686;
+}
+.holder-name-Active {
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.cardlogo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+}
+.cvc {
+  font-weight: 700;
+  position: absolute;
+  top: 67.5px;
+  right: 32px;
+  font-size: 16px;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #868686;
+}
+/* 664 */
+@media only screen and (min-width: 710px) {
+  .main-container {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 0 40px;
+  }
+  .card-holder {
+    width: 100%;
+    min-width: 330px;
+    height: 250px;
+  }
+  .card-one {
+    top: 0;
+    left: 0;
+  }
+  .card-two {
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .card-holder {
+    width: 100%;
+    min-width: 530px;
+    height: 512px;
+  }
+  .card-one,
+  .card-two {
+    width: 447px;
+    height: 245px;
+  }
+  .card-one {
+    background: url("./assets/bg-card-front.png") center / 447px 245px no-repeat;
+  }
+  .card-two {
+    background: url("./assets/bg-card-back.png") center / 447px 245px no-repeat;
+  }
+  .text-container-card {
+    width: 402px;
+    position: absolute;
+    top: 138px;
+    left: 20px;
+    display: grid;
+    gap: 20px;
+  }
+  .holder-name {
+    font-size: 28px;
+  }
+  .cardlogo {
+    width: 80px;
+  }
+  .name-date {
+    font-size: 16px;
+  }
+  .cvc {
+    top: 106px;
+    right: 50px;
+    font-size: 24px;
+  }
 }
