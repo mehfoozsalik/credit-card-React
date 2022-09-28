@@ -69,8 +69,8 @@ function App() {
     }
 
     if (
-      !checkExpiry.isMonth &&
-      !checkExpiry.isYear &&
+      checkExpiry.isMonth &&
+      checkExpiry.isYear &&
       cardDetail.holderName &&
       cardDetail.holderNumber &&
       cardDetail.month &&
